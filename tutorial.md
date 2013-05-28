@@ -215,6 +215,18 @@ Paste this in `nano`, and adjust as necessary:
          
 Save the file, and stop mark2 by running either `mark2 stop` or `~stop` in the console. Start mark2 by running `mark2 start`.
 
+Now, in case you need to restart your VPS, let's set it up so that mark2 starts your server automatically: 
+
+    sudo nano /etc/crontab
+
+Add this to the end, obviously customizing your server location and username:
+
+    @reboot <username> mark2 start /home/<username>/spigot
+
+Save the file, and that should be covered. **If you really need to test it**, you can attempt to restart the server:
+
+    sudo reboot
+
 This covers the general server setup using mark2. Sit back, relax, eat a sandwich, and play some Minecraft.
 
 *This guide is incomplete. I will cover graphical access later.*
