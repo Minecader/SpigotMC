@@ -16,6 +16,7 @@ Your host should have provided details for accessing your server via SSH.
 Fill in the details on your respective client, and start the SSH session. You might see something about "the authenticity of the server can't be established", that's normal, and just input "y" or "yes". Now, input the password your host gave you (you won't see it in the client, that's convention). You can paste using the **right mouse button** on Putty, and otherwise, it depends on your terminal.
 
 Once you're inside, you should see the Ubuntu message of the day, and a line on the bottom saying:
+
     root@<machine hostname>:~$ 
     
 That is the shell you will be using, and let's get this party started.
@@ -57,6 +58,15 @@ underneath `root    ALL=(ALL:ALL) ALL`. Press Ctrl+X and input Y and enter to sa
 Now, exit your SSH session by running `exit`, and follow "accessing your server", this time using the account you just created instead of root.
 
 Once you've gotten into your new account, we need to test if it has root privileges. Run a `sudo apt-get update`, input your password, and see if it runs. If it runs, you're on the right track, otherwise, go back a few steps and check your work.
+
+Now, let's remove some annoyances of nano:
+
+    sudo nano /etc/nanorc
+    
+Change `set historylog` to `#set historylog`, and save the file. Next:
+
+    cd ~
+    sudo rm .nano_history
 
 Now, we need to disable the root account, as we don't need it anymore, and it presents a security risk. 
 Run `sudo passwd -l root`, and now, we'll edit the SSHd configuration so that `root` can't log in either:
@@ -110,3 +120,44 @@ This is pretty straightforward, and don't worry if you don't understand the comm
     sudo ln -s /usr/mark2/mark2 /usr/bin/mark2
     
 Congratulations! You have now set up mark2. Finally, let's download and install our Minecraft server running [Spigot](http://spigotmc.org/).
+
+Setting up Spigot
+--
+
+First, let's get back to your home directory, and make a folder called `spigot`:
+
+    cd ~
+    mkdir spigot
+    cd spigot
+
+Now, let's get the latest Spigot JAR, using mark2:
+
+    mark2 jar-get spigot-latest
+    
+Wait a few seconds, and the Spigot JAR should be downloaded.
+
+Now, let's set up a blank mark2 configuration, so we can start the server:
+
+    sudo mark2 config
+    
+Save the file without making any changes, as it's easier to use our own `mark2.properties` instead of trawling thru the config.
+
+We need to tell mark2 what to do, so:
+
+    nano mark2.properties
+    
+Paste this into `nano`:
+
+    java.cli.X.ms=1024M
+    java.cli.X.mx=1024M
+    # Use whatever mark2 saved the JAR as here
+    mark2.jar-path=spigot-1.5.2-R0.2-SNAPSHOT.jar
+    # Saving notifications aren't really useful
+    plugin.save.warn-message=
+    plugin.save.message=
+    
+Save the file, and now, let's start the server:
+
+    mark2 start
+    
+You should see mark2 starting the server, and congratulations, you have set up a server with mark2. Connect to your Minecraft server using your VPS' address, and bask in the glory of having set up a Minecraft server.
