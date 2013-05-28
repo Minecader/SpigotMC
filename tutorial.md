@@ -31,15 +31,18 @@ The first things we will be doing are:
 * disabling the root account, and enabling escalation via `sudo`
 
 To update your server, run the following two commands (press enter at each newline):
+
     apt-get update
     apt-get dist-upgrade
 
 See, that wasn't too difficult. Next, we'll add an administrative user:
+
     adduser <user name here>
     
 For example, `adduser minecraft`. After you've set and verified the password, you don't need to put any more information. Just keep on hitting enter.
 
 Next, we'll be adding the new user to the administrative users list:
+
     apt-get install nano
     visudo
 
@@ -73,4 +76,37 @@ Now, in case you don't like the spammy Ubuntu message of the day when you log in
 
 For future reference, `~` is your home directory (a.k.a. folder).
 
+Setting up mark2
+--
 
+[mark2](http://github.com/mcdevs/mark2/) is a *server wrapper* with advanced monitoring, scripting, and multiuser capabilities that's point-and-click through the SSH session, and is easy to install on Ubuntu. Let's get started.
+
+First of all, we need to install some dependencies:
+
+    sudo apt-get install python-software-properties software-properties-common
+
+Next, we'll add a repository for access to the latest and greatest version of `twisted`, which mark2 relies on:
+    
+    sudo add-apt-repository ppa:twisted-dev/ppa
+    sudo apt-get update
+    
+Press enter, and now we install the rest of the python dependencies:
+
+    sudo apt-get install python-dev python-pip python-twisted-core python-twisted-web python-twisted-words
+    sudo pip install psutil urwid feedparser
+    
+We are done with the dependencies. Now, it's time to:
+
+* Download the mark2 archive and unpack it
+* Link mark2 to an executable so you can easily run it
+
+This is pretty straightforward, and don't worry if you don't understand the commands:
+
+    cd /usr
+    sudo wget https://github.com/mcdevs/mark2/archive/master.tar.gz
+    sudo tar zxvf master.tar.gz
+    sudo rm master.tar.gz
+    sudo mv mark2-master mark2
+    sudo ln -s /usr/mark2/mark2 /usr/bin/mark2
+    
+Congratulations! You have now set up mark2. Finally, let's download and install our Minecraft server running [Spigot](http://spigotmc.org/).
