@@ -78,7 +78,7 @@ Find the line that says "PermitRootLogin", and change that to no. Save the file 
 
     sudo service ssh restart
 
-More security-conscious admins may point out that the SSH port has remained the same, and that I have introduced private key authentication, but those are outside the scope of the tutorial, and should not be necessary.
+More security-conscious admins may point out that the SSH port has remained the same, and that I should have introduced private key authentication, but those are outside the scope of the tutorial, and should not be necessary.
 
 Now, in case you don't like the spammy Ubuntu message of the day when you log in, you can do:
 
