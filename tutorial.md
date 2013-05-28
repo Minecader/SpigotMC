@@ -3,6 +3,7 @@ Prerequisites
 
 * a `vswap` OpenVZ VPS or a KVM/Xen/VMware VPS with Ubuntu Server 12.04 LTS installed (architecture doesn't matter)
 * patience and a willingness to learn
+* approximately 10 minutes of time
 
 Accessing your server
 --
@@ -185,4 +186,6 @@ If you have multiple servers, you can click the server names at the top of the m
 
 **If you're getting special accented characters for mark2, you need to force your SSH client to use UTF-8 encoding.**
 
-For Putty, you can go to *Window > Translation*, and set "received data" to `UTF-8`. Restart putty to see the changes.
+For Putty, you can go to *Window > Translation*, and set "received data" to `UTF-8`. Restart Putty to see the changes.
+
+*This guide is incomplete. I will cover scripting and graphical access later.*
