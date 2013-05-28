@@ -68,8 +68,8 @@ More security-conscious admins may point out that the SSH port has remained the 
 
 Now, in case you don't like the spammy Ubuntu message of the day when you log in, you can do:
 
-   cd ~
-   touch .hushlogin
+    cd ~
+    touch .hushlogin
 
 For future reference, `~` is your home directory (a.k.a. folder).
 
