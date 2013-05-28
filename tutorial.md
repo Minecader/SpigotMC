@@ -231,6 +231,17 @@ This covers the general server setup using mark2. Sit back, relax, eat a sandwic
 
 *This guide is incomplete. I will cover graphical access later.*
 
+Graphical access
+--
+
+In case you're not feeling like using `wget` and `nano` to download plugins and edit configs, or want to easily transfer your existing server, any SCP/SFTP client will do.
+
+[WinSCP](http://winscp.net/eng/index.php) is a good choice for Windows, [CyberDuck](http://cyberduck.ch/) works quite well on OS X, and [Filezilla](https://filezilla-project.org/) is a nice cross-platform solution.
+
+For these clients, just select SCP or SFTP, and use your SSH credentials. Use their respective documentations for usage.
+
+*I will cover additional resources, and tips/tricks later.*
+
 ### Some entertainment
 
     <LaxWasHere> You could have just made a bash script. "Minecraft in 2 seconds."
