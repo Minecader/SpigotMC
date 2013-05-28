@@ -161,3 +161,16 @@ Save the file, and now, let's start the server:
     mark2 start
     
 You should see mark2 starting the server, and congratulations, you have set up a server with mark2. Connect to your Minecraft server using your VPS' address, and bask in the glory of having set up a Minecraft server.
+
+Accessing your Minecraft console
+--
+
+To access your Minecraft console, run `mark2 attach`. This is the standard mark2 console, and note that you can click on most things, and control the server that way. Let's run some sample commands:
+
+    version
+    
+That gives you the Spigot version you're running. Now, run the following **with the tilde** to restart the MC server:
+
+    ~restart
+    
+Now, exit mark2 by pressing Ctrl+C. You can reattach using `mark2 attach`. You can run **either** `~stop` in the console or `mark2 stop` to stop the MC server.
