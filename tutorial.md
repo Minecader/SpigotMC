@@ -230,3 +230,10 @@ Save the file, and that should be covered. **If you really need to test it**, yo
 This covers the general server setup using mark2. Sit back, relax, eat a sandwich, and play some Minecraft.
 
 *This guide is incomplete. I will cover graphical access later.*
+
+### Some entertainment
+
+    <LaxWasHere> You could have just made a bash script. "Minecraft in 2 seconds."
+    <chiisana> 2 seconds* 
+    <chiisana> *: actual time may vary depending on internet connection speed, and server installation time
+    <vemacs> Coming soon?!
