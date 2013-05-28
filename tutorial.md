@@ -5,6 +5,17 @@ Prerequisites
 * patience and a willingness to learn
 * approximately 10 minutes of time
 
+Why Ubuntu LTS?
+--
+
+You can skip this section, but here's some reasoning as for why I chose Ubuntu LTS for this guide:
+* It combines the stability of Debian with support from the larger Ubuntu community
+* The "milestone" release cycle helps maintain stability and support
+* It has updated repositories and easy ways to install software not in them
+* It has enterprise support and is easy for newbies to understand
+* It has a sensible package manager (for installing software) and startup daemon
+* It's fast, has sensible defaults, and is easy to set up Minecraft on
+
 Accessing your server
 --
 
