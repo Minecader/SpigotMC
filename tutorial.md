@@ -13,10 +13,59 @@ Your host should have provided details for accessing your server via SSH.
 * On a Unix-based OS (e.g. Mac OS X), you can use the SSH client in the terminal as such:
   `ssh <server address> -l <username, should be root for clean setups> -p <port>`
 
-Fill in the details on your respective client, and start the SSH session. Now, input the password your host gave you (you won't see it in the client, that's convention). You can paste using the **right mouse button** on Putty, and otherwise, it depends on your terminal.
+Fill in the details on your respective client, and start the SSH session. You might see something about "the authenticity of the server can't be established", that's normal, and just input "y" or "yes". Now, input the password your host gave you (you won't see it in the client, that's convention). You can paste using the **right mouse button** on Putty, and otherwise, it depends on your terminal.
 
 Once you're inside, you should see the Ubuntu message of the day, and a line on the bottom saying:
     root@<machine hostname>:~$ 
     
 That is the shell you will be using, and let's get this party started.
+
+Securing your server
+--
+
+The `root` account is the superuser of the system, and as such, you should not run non-administrative tasks using this account.
+
+The first things we will be doing are:
+* updating your server to the latest packages
+* setting up a separate user account on your system for running your server
+* disabling the root account, and enabling escalation via `sudo`
+
+To update your server, run the following two commands (press enter at each newline):
+    apt-get update
+    apt-get dist-upgrade
+
+See, that wasn't too difficult. Next, we'll add an administrative user:
+    adduser <user name here>
+    
+For example, `adduser minecraft`. After you've set and verified the password, you don't need to put any more information. Just keep on hitting enter.
+
+Next, we'll be adding the new user to the administrative users list:
+    apt-get install nano
+    visudo
+
+`nano` is the easiest text editor for newbies, and so if `visudo` asks you for a text editor, use that.
+
+Find the line near the center of the page that says `# User privilege specification`, and add
+    <user name here>    ALL=(ALL:ALL) ALL
+underneath `root    ALL=(ALL:ALL) ALL`. Press Ctrl+X and input Y and enter to save.
+
+Now, exit your SSH session by running `exit`, and follow "accessing your server", this time using the account you just created instead of root.
+
+Once you've gotten into your new account, we need to test if it has root privileges. Run a `sudo apt-get update`, input your password, and see if it runs. If it runs, you're on the right track, otherwise, go back a few steps and check your work.
+
+Now, we need to disable the root account, as we don't need it anymore, and it presents a security risk. 
+Run `sudo passwd -l root`, and now, we'll edit the SSHd configuration so that `root` can't log in either:
+    sudo nano /etc/ssh/sshd_config
+
+Find the line that says "PermitRootLogin", and change that to no. Save the file like you did in `visudo`, and then run:
+    sudo service ssh restart
+
+More security-conscious admins may point out that the SSH port has remained the same, and that I have introduced private key authentication, but those are outside the scope of the tutorial, and should not be necessary.
+
+Now, in case you don't like the spammy Ubuntu message of the day when you log in, you can do:
+   cd ~
+   touch .hushlogin
+
+For future reference, `~` is your home directory (a.k.a. folder).
+
 
