@@ -229,8 +229,6 @@ Save the file, and that should be covered. **If you really need to test it**, yo
 
 This covers the general server setup using mark2. Sit back, relax, eat a sandwich, and play some Minecraft.
 
-*This guide is incomplete. I will cover graphical access later.*
-
 Graphical access
 --
 
@@ -240,7 +238,31 @@ In case you're not feeling like using `wget` and `nano` to download plugins and 
 
 For these clients, just select SCP or SFTP, and use your SSH credentials. Use their respective documentations for usage.
 
-*I will cover additional resources, and tips/tricks later.*
+Tips and tricks
+--
+
+If you really need a specific version of a JAR, or just want to download files directly, `cd` into the directory you want to download to, and then:
+
+    wget <file location> -O <output name>
+    
+You might need to `sudo apt-get install wget`, depending on your Ubuntu image.
+
+For monitoring resource usage, you can run `top`, and for monitoring memory usage, you can run `free -m`.
+
+Update your system using `sudo apt-get update && sudo apt-get dist-upgrade`.
+
+Have fun!
+
+Additional resources
+--
+
+You should review these sometime to learn more about Ubuntu, mark2, and Linux in general (assuming you already know how to administer Minecraft servers)
+
+* Some useful [Linux commands](https://help.ubuntu.com/community/UsingTheTerminal#Commands)
+* mark2 [configuration samples](https://github.com/mcdevs/mark2/tree/master/samples)
+* mark2's [readme](https://github.com/mcdevs/mark2/blob/master/README.md) and [usage](https://github.com/mcdevs/mark2/blob/master/USAGE.md)
+* Why Linux isn't actually [eating your RAM](http://www.linuxatemyram.com/)
+* Intro to the Linux [file system](http://www.linux.org/article/view/getting-around-in-linux-directories)
 
 ### Some entertainment
 
