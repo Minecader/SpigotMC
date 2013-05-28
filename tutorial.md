@@ -179,4 +179,10 @@ That gives you the Spigot version you're running. Now, run the following **with 
 
     ~restart
     
-Now, exit mark2 by pressing Ctrl+C. You can reattach using `mark2 attach`. You can run **either** `~stop` in the console or `mark2 stop` to stop the MC server.
+Now, exit mark2 by pressing Ctrl+C. You can reattach using `mark2 attach`. You can run **either** `~stop` in the console or `mark2 stop` to stop the MC server. This works for multiple logged on users without any additional configuration, unlike `screen` or `tmux`.
+
+If you have multiple servers, you can click the server names at the top of the mark2 screen to switch to one of them.
+
+**If you're getting special accented characters for mark2, you need to force your SSH client to use UTF-8 encoding.**
+
+For Putty, you can go to *Window > Translation*, and set "received data" to `UTF-8`. Restart putty to see the changes.
