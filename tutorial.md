@@ -188,4 +188,33 @@ If you have multiple servers, you can click the server names at the top of the m
 
 For Putty, you can go to *Window > Translation*, and set "received data" to `UTF-8`. Restart Putty to see the changes.
 
-*This guide is incomplete. I will cover scripting and graphical access later.*
+Scripting mark2, and maintaining uptime
+--
+
+This will be the final "tutorial" component, and will cover:
+* Automatic restarts
+* Periodic saves
+* Starting mark2 automatically if your server restarts
+
+mark2 has a powerful scripting mechanism. I recommend that you [review it first](https://raw.github.com/mcdevs/mark2/master/samples/scripts.txt) before continuing, so that you gain a better understanding of the `cron` syntax used in mark2 and Linux in general.
+
+Now, let's create the `scripts.txt` file:
+
+    cd ~
+    cd spigot
+    nano scripts.txt
+    
+Paste this in `nano`, and adjust as necessary:
+
+         # Saves the map every 15 minutes
+         */15 *    *    *    *    ~save
+         # Restarts Spigot every 24 hours
+         0    12   *    *    *    ~restart
+         # Warns 5 minutes before restart
+         55   11   *    *    *    /say Server restarting in 5 minutes
+         
+Save the file, and stop mark2 by running either `mark2 stop` or `~stop` in the console. Start mark2 by running `mark2 start`.
+
+This covers the general server setup using mark2. Sit back, relax, eat a sandwich, and play some Minecraft.
+
+*This guide is incomplete. I will cover graphical access later.*
