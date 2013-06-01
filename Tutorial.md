@@ -136,11 +136,11 @@ Congratulations! You have now set up mark2. Finally, let's download and install 
 Setting up Spigot
 --
 
-Obviously, we need to install Java first (we'll be installing the OpenJDK7 JRE):
+Obviously, we need to install Java first (we'll be installing Oracle Java 7):
 
-    sudo apt-get install openjdk-7-jre
-    sudo apt-get install default-jre
-
+    sudo add-apt-repository ppa:webupd8team/java
+    sudo apt-get update
+    sudo apt-get install oracle-java7-installer
 
 First, let's get back to your home directory, and make a folder called `spigot`:
 
