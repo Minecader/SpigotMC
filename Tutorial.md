@@ -27,6 +27,8 @@ Your host should have provided details for accessing your server via SSH.
 
 Fill in the details on your respective client, and start the SSH session. You might see something about "the authenticity of the server can't be established", that's normal, and just input "y" or "yes". Now, input the password your host gave you (you won't see it in the client, that's convention). You can paste using the **right mouse button** on Putty, and otherwise, it depends on your terminal.
 
+**If your host didn't give you a root account, (OVH sometimes does this), you can skip this and "securing your server".**
+
 Once you're inside, you should see the Ubuntu message of the day, and a line on the bottom saying:
 
     root@<machine hostname>:~$ 
@@ -107,7 +109,7 @@ First of all, we need to install some dependencies:
 
     sudo apt-get install python-software-properties software-properties-common
 
-Next, we'll add a repository for access to the latest and greatest version of `twisted`, which mark2 relies on:
+Then, we'll add a repository for access to the latest and greatest version of `twisted`, which mark2 relies on:
     
     sudo add-apt-repository ppa:twisted-dev/ppa
     sudo apt-get update
@@ -142,7 +144,7 @@ Obviously, we need to install Java first (we'll be installing Oracle Java 7):
     sudo apt-get update
     sudo apt-get install oracle-java7-installer
 
-First, let's get back to your home directory, and make a folder called `spigot`:
+Next, let's get back to your home directory, and make a folder called `spigot`:
 
     cd ~
     mkdir spigot
