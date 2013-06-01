@@ -187,7 +187,7 @@ Accessing your Minecraft console
 
 To access your Minecraft console, run `mark2 attach`. This is the standard mark2 console, and note that you can click on most things, and control the server that way. 
 
-**If you're having "UnicodeEncodeError" after running that, run:**
+**If you're having "UnicodeEncodeError" after running that, run this, and run `mark2 attach` again:**
 
     sudo update-locale LANG=en_US.UTF-8 LC_MESSAGES=en_US.UTF-8
 
