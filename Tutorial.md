@@ -1,7 +1,7 @@
 Prerequisites
 --
 
-* a `vswap` OpenVZ VPS or a KVM/Xen/VMware VPS with Ubuntu Server 12.04 LTS installed (architecture doesn't matter)
+* a `vswap` OpenVZ VPS or a KVM/Xen/VMware VPS with Ubuntu Server 12.04 LTS installed (architecture doesn't matter), or a dedicated server
 * patience and a willingness to learn
 * approximately 10 minutes of time
 
