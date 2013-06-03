@@ -260,6 +260,10 @@ For these clients, just select SCP or SFTP, and use your SSH credentials. Use th
 Tips and tricks
 --
 
+If you're using a Spigot derivative, set `restart-on-crash` to `false` in `bukkit.yml`. This conflicts with mark2's crash detection, and doesn't detect possible connection failures, it only checks for server hangs.
+
+If you're migrating a server, and you can't connect after the migration, check that `server-ip` in `server.properties` is either blank or the IP you want it to bind to, and check your Votifier settings (this can cause connection failures).
+
 If you really need a specific version of a JAR, or just want to download files directly, `cd` into the directory you want to download to, and then:
 
     wget <file location> -O <output name>
