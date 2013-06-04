@@ -111,7 +111,7 @@ Then, we'll add a repository for access to the latest and greatest version of `t
     sudo add-apt-repository ppa:twisted-dev/ppa
     sudo apt-get update
     
-Press enter, and now we install the rest of the python dependencies:
+Press enter, and now we install the rest of the python dependencies **(this is one very long line)**:
 
     sudo apt-get install python-dev python-twisted-core python-twisted-web python-twisted-words python-psutil python-urwid python-feedparser
   
