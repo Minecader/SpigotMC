@@ -58,20 +58,17 @@ For example, `adduser minecraft`. After you've set and verified the password, yo
 
 Next, we'll be adding the new user to the administrative users list:
 
-    apt-get install nano
-    visudo
-
-`nano` is the easiest text editor for newbies, and so if `visudo` asks you for a text editor, use that.
-
-Find the line near the center of the page that says `# User privilege specification`, and add
-
-    <user name here>    ALL=(ALL:ALL) ALL
-    
-underneath `root    ALL=(ALL:ALL) ALL`. Press Ctrl+X and input Y and enter to save.
+    adduser minecraft sudo && adduser minecraft adm
 
 Now, exit your SSH session by running `exit`, and follow "accessing your server", this time using the account you just created instead of root.
 
 Once you've gotten into your new account, we need to test if it has root privileges. Run a `sudo apt-get update`, input your password, and see if it runs. If it runs, you're on the right track, otherwise, go back a few steps and check your work.
+
+Let's change our SSH login settings. First, let's install nano, the text editor (if it isn't already installed):
+
+    sudo apt-get install nano
+
+Run `nano`, and take a look. `Ctrl+X`, then `Y + Enter` closes and saves a file. A blank file isn't saved. Close `nano`, and read on.
 
 Now, let's remove some annoyances of nano:
 
