@@ -138,7 +138,7 @@ Obviously, we need to install Java first (we'll be installing Oracle Java 7):
 
     sudo add-apt-repository ppa:webupd8team/java
     sudo apt-get update
-    sudo apt-get install oracle-java7-installer
+    sudo apt-get install oracle-java7-installer oracle-java7-set-default
 
 Next, let's get back to your home directory, and make a folder called `spigot`:
 
