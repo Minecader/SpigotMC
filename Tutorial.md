@@ -269,7 +269,12 @@ You might need to `sudo apt-get install wget`, depending on your Ubuntu image.
 
 For monitoring resource usage, you can run `top`, and for monitoring memory usage, you can run `free -m`.
 
-Update your system using `sudo apt-get update && sudo apt-get dist-upgrade`.
+Update your system using `sudo apt-get update && sudo apt-get dist-upgrade`. Update mark2 by first deleting it:
+
+    cd /usr
+    sudo rm -rf mark2
+    
+Then, follow the mark2 download instructions, starting with `cd /usr`.
 
 Have fun!
 
