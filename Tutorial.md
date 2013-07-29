@@ -106,12 +106,7 @@ First of all, we need to install some dependencies:
 
     sudo apt-get install python-software-properties software-properties-common
 
-Then, we'll add a repository for access to the latest and greatest version of `twisted`, which mark2 relies on:
-    
-    sudo add-apt-repository ppa:twisted-dev/ppa
-    sudo apt-get update
-    
-Press enter, and now we install the rest of the python dependencies:
+Press enter, and now we install the rest of the python dependencies (this allows mark2 installation through pip):
 
     sudo apt-get install python-dev python-pip
 
@@ -258,12 +253,7 @@ You might need to `sudo apt-get install wget`, depending on your Ubuntu image.
 
 For monitoring resource usage, you can run `top`, and for monitoring memory usage, you can run `free -m`.
 
-Update your system using `sudo apt-get update && sudo apt-get dist-upgrade`. Update mark2 by first deleting it:
-
-    cd /usr
-    sudo rm -rf mark2
-    
-Then, follow the mark2 download instructions, starting with `cd /usr`.
+Update your system using `sudo apt-get update && sudo apt-get dist-upgrade`. Update mark2 using `sudo pip install --upgrade mark2`.
 
 Have fun!
 
