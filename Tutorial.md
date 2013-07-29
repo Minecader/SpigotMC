@@ -113,22 +113,11 @@ Then, we'll add a repository for access to the latest and greatest version of `t
     
 Press enter, and now we install the rest of the python dependencies:
 
-    sudo apt-get install python-dev python-twisted-core python-twisted-web python-twisted-words
-    sudo pip install urwid feedparser psutil
+    sudo apt-get install python-dev python-pip
 
-We are done with the dependencies. Now, it's time to:
+We are done with the dependencies. Now, it's time to install mark2.
 
-* Download the mark2 archive and unpack it
-* Link mark2 to an executable so you can easily run it
-
-This is pretty straightforward, and don't worry if you don't understand the commands:
-
-    cd /usr
-    sudo wget https://github.com/mcdevs/mark2/archive/master.tar.gz
-    sudo tar zxvf master.tar.gz
-    sudo rm master.tar.gz
-    sudo mv mark2-master mark2
-    sudo ln -s /usr/mark2/mark2 /usr/bin/mark2
+    sudo pip install mark2
     
 Congratulations! You have now set up mark2. Finally, let's download and install our Minecraft server running [Spigot](http://spigotmc.org/).
 
