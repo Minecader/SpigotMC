@@ -238,6 +238,31 @@ In case you're not feeling like using `wget` and `nano` to download plugins and 
 
 For these clients, just select SCP or SFTP, and use your SSH credentials. Use their respective documentations for usage.
 
+MySQL Server
+--
+
+Some plugins, such as Logblock, require an SQL server. Setting up a server that can be accessed only locally is as easy as:
+
+    sudo apt-get install mysql-server
+    
+Input your preferred SQL password (preferably different from your server password), and we can create a database.
+
+First, let's login to the MySQL shell:
+
+    mysql -u root -p
+    
+Type the password you set earlier, and now, inside the shell:
+
+    create database minecraft
+    exit
+    
+That created a database called `minecraft`, and exits the shell.
+
+Now, to use that database in a plugin, fill in the host as `localhost`, username as `root`, password as the one you set during the install, and database as `minecraft`. 
+
+If you want to set up multiple SQL users, or access the database remotely, that is outside the scope of this tutorial.
+Please use Google for guides.
+
 Tips and tricks
 --
 
