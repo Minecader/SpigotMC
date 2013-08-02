@@ -256,7 +256,7 @@ Type the password you set earlier, and now, inside the shell:
     create database minecraft;
     exit
     
-That created a database called `minecraft`, and exits the shell.
+That created a database called `minecraft`, and exits the shell. SQL queries end with `;`.
 
 Now, to use that database in a plugin, fill in the host as `localhost`, username as `root`, password as the one you set during the install, and database as `minecraft`. 
 
