@@ -253,7 +253,7 @@ First, let's login to the MySQL shell:
     
 Type the password you set earlier, and now, inside the shell:
 
-    create database minecraft
+    create database minecraft;
     exit
     
 That created a database called `minecraft`, and exits the shell.
