@@ -81,7 +81,7 @@ Change `set historylog` to `#set historylog`, and save the file. Next:
     sudo rm .nano_history
 
 Now, we need to disable the root account, as we don't need it anymore, and it presents a security risk. 
-Run `sudo passwd -l root`, and now, we'll edit the SSHd configuration so that `root` can't log in either:
+Run `sudo passwd -dl root`, and now, we'll edit the SSHd configuration so that `root` can't log in either:
 
     sudo nano /etc/ssh/sshd_config
 
