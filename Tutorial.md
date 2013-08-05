@@ -58,7 +58,8 @@ For example, `adduser minecraft`. After you've set and verified the password, yo
 
 Next, we'll be adding the new user to the administrative users list:
 
-    adduser minecraft sudo && adduser minecraft adm
+    usermod -a -G sudo <user name here>
+
 
 Now, exit your SSH session by running `exit`, and follow "accessing your server", this time using the account you just created instead of root.
 
