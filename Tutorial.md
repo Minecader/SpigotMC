@@ -16,6 +16,8 @@ You can skip this section, but here's some reasoning as for why I chose Ubuntu L
 * It has a sensible package manager (for installing software) and startup daemon
 * It's fast, has sensible defaults, and is easy to set up Minecraft on
 
+**Note: This guide should work for Debian 7. However, instead of using the PPA for Oracle Java 7, follow [these instructions](http://www.webupd8.org/2012/06/how-to-install-oracle-java-7-in-debian.html) instead.**
+
 Accessing your server
 --
 
