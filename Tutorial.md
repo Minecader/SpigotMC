@@ -161,6 +161,8 @@ Paste this into `nano`:
     # Saving notifications aren't really useful
     plugin.save.warn-message=
     plugin.save.message=
+    # This helps stop GC hangs
+    java.cli.XX.UseConcMarkSweepGC=true
     
 Save the file, and now, let's start the server:
 
@@ -271,7 +273,7 @@ Please use Google for guides.
 Tips and tricks
 --
 
-If you're using a Spigot derivative, set `restart-on-crash` to `false` in `bukkit.yml`. This conflicts with mark2's crash detection, and doesn't detect possible connection failures, it only checks for server hangs.
+If you're using a Spigot derivative, set `restart-on-crash` to `false` in `bukkit.yml`. **This conflicts with mark2's crash detection**, and doesn't detect possible connection failures, it only checks for server hangs. If your server is **crashing due to a PermGen related issue**, add `java.cli.XX.PermSize=128M` to your `mark2.properties`.
 
 If you're migrating a server, and you can't connect after the migration, check that `server-ip` in `server.properties` is either blank or the IP you want it to bind to, and check your Votifier settings (this can cause connection failures).
 
