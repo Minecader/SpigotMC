@@ -89,7 +89,7 @@ Run `sudo passwd -dl root`, and now, we'll edit the SSHd configuration so that `
 
     sudo nano /etc/ssh/sshd_config
 
-Find the line that says "PermitRootLogin", and change that to no. Save the file, and then run:
+Find the line that says "PermitRootLogin", and change that to `no`. Save the file, and then run:
 
     sudo service ssh restart
 
