@@ -79,7 +79,7 @@ Now, let's remove some annoyances of nano:
 
     sudo nano /etc/nanorc
     
-Change `set historylog` to `#set historylog`, and save the file. Next:
+Change `set historylog` to `#set historylog`, and save the file `Ctrl + X`, `Y`, `Enter`. Next:
 
     cd ~
     sudo rm .nano_history
@@ -89,7 +89,7 @@ Run `sudo passwd -dl root`, and now, we'll edit the SSHd configuration so that `
 
     sudo nano /etc/ssh/sshd_config
 
-Find the line that says "PermitRootLogin", and change that to no. Save the file like you did in `visudo`, and then run:
+Find the line that says "PermitRootLogin", and change that to no. Save the file, and then run:
 
     sudo service ssh restart
 
