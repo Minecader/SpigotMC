@@ -79,7 +79,7 @@ Now, let's remove some annoyances of nano:
 
     sudo nano /etc/nanorc
     
-Change `set historylog` to `#set historylog`, and save the file `Ctrl + X`, `Y`, `Enter`. Next:
+Change `set historylog` to `#set historylog`, and save the file: `Ctrl + X`, `Y`, and `Enter`. Next:
 
     cd ~
     sudo rm .nano_history
