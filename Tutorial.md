@@ -18,6 +18,8 @@ You can skip this section, but here's some reasoning as for why I chose Ubuntu L
 
 **Note: This guide should work for Debian 7. However, instead of using the PPA for Oracle Java 7, follow [these instructions](http://www.webupd8.org/2012/06/how-to-install-oracle-java-7-in-debian.html) instead.**
 
+**Note 2: For securing CentOS, follow [this guide](http://lowendbox.com/blog/securing-your-server-ssh-and-sudo/). You need to install `python-pip`, which can be found in EPEL, and `python-dev`, which should be in the standard repos.**
+
 Accessing your server
 --
 
