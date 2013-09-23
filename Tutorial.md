@@ -219,6 +219,8 @@ Paste this in `nano`, and adjust as necessary:
          0    12   *    *    *    ~restart
          # Warns 5 minutes before restart
          55   11   *    *    *    /say Server restarting in 5 minutes
+         # Since the logs are already compressed in /logs
+         @serverstopped           $rm server.log
          
 Save the file, and stop mark2 by running either `mark2 stop` or `~stop` in the console. Start mark2 by running `mark2 start`.
 
