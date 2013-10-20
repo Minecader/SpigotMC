@@ -300,7 +300,7 @@ You should review these sometime to learn more about Ubuntu, mark2, and Linux in
 * mark2 [configuration samples](https://github.com/mcdevs/mark2/tree/master/samples)
 * mark2's [readme](https://github.com/mcdevs/mark2/blob/master/README.md) and [usage](https://github.com/mcdevs/mark2/blob/master/USAGE.md)
 * Why Linux isn't actually [eating your RAM](http://www.linuxatemyram.com/)
-* Intro to the Linux [file system](http://www.linux.org/article/view/getting-around-in-linux-directories)
+* Intro to the Linux [file system](http://www.linux.org/threads/getting-around-in-linux-directories.4090/)
 
 ### Some entertainment
 
