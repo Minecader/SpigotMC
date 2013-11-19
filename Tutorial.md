@@ -138,7 +138,7 @@ Next, let's get back to your home directory, and make a folder called `spigot`:
 
 Now, let's get the latest Spigot JAR, using mark2:
 
-    mark2 jar-get spigot-latest
+    wget http://ci.md-5.net/job/spigot/lastSuccessfulBuild/artifact/Spigot-Server/target/spigot.jar
     
 Wait a few seconds, and the Spigot JAR should be downloaded.
 
