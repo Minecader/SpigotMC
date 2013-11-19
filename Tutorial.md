@@ -136,7 +136,7 @@ Next, let's get back to your home directory, and make a folder called `spigot`:
     mkdir spigot
     cd spigot
 
-Now, let's get the latest Spigot JAR, using mark2:
+Now, let's get the latest Spigot JAR, using `wget`:
 
     wget http://ci.md-5.net/job/spigot/lastSuccessfulBuild/artifact/Spigot-Server/target/spigot.jar
     
