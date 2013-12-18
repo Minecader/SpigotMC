@@ -125,6 +125,7 @@ This is pretty straightforward, and don't worry if you don't understand the comm
     sudo rm master.tar.gz
     sudo mv mark2-master mark2
     sudo ln -s /usr/mark2/mark2 /usr/bin/mark2
+    sudo ln -s /usr/mark2/mark2 /usr/local/bin/mark2
     
 Congratulations! You have now set up mark2. Finally, let's download and install our Minecraft server running [Spigot](http://spigotmc.org/).
 
