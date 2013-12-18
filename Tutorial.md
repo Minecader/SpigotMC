@@ -109,15 +109,22 @@ Setting up mark2
 
 First of all, we need to install some dependencies:
 
-    sudo apt-get install python-software-properties software-properties-common
+    sudo apt-get install python-dev python-twisted-core python-twisted-web python-twisted-words libssl-dev python-pip
+    sudo pip install urwid feedparser psutil
+ 
+We are done with the dependencies. Now, it's time to:
+ 
+* Download the mark2 archive and unpack it
+* Link mark2 to an executable so you can easily run it
 
-Press enter, and now we install the rest of the python dependencies (this allows mark2 installation through pip):
+This is pretty straightforward, and don't worry if you don't understand the commands:
 
-    sudo apt-get install python-dev python-pip
-
-We are done with the dependencies. Now, it's time to install mark2.
-
-    sudo pip install mark2
+    cd /usr
+    sudo wget https://github.com/mcdevs/mark2/archive/master.tar.gz
+    sudo tar zxvf master.tar.gz
+    sudo rm master.tar.gz
+    sudo mv mark2-master mark2
+    sudo ln -s /usr/mark2/mark2 /usr/bin/mark2
     
 Congratulations! You have now set up mark2. Finally, let's download and install our Minecraft server running [Spigot](http://spigotmc.org/).
 
