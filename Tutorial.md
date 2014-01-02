@@ -109,23 +109,18 @@ Setting up mark2
 
 First of all, we need to install some dependencies:
 
-    sudo apt-get install python-dev python-twisted-core python-twisted-web python-twisted-words libssl-dev python-pip
+    sudo apt-get install python-dev python-twisted-core python-twisted-web python-twisted-words libssl-dev python-pip git
     sudo pip install urwid feedparser psutil
  
 We are done with the dependencies. Now, it's time to:
  
-* Download the mark2 archive and unpack it
+* Clone the mark2 repository
 * Link mark2 to an executable so you can easily run it
 
 This is pretty straightforward, and don't worry if you don't understand the commands:
 
-    cd /usr
-    sudo wget https://github.com/mcdevs/mark2/archive/master.tar.gz
-    sudo tar zxvf master.tar.gz
-    sudo rm master.tar.gz
-    sudo mv mark2-master mark2
-    sudo ln -s /usr/mark2/mark2 /usr/bin/mark2
-    sudo ln -s /usr/mark2/mark2 /usr/local/bin/mark2
+    sudo git clone git://github.com/mcdevs/mark2.git /usr/local/share/mark2
+    sudo ln -s /usr/local/share/mark2/mark2 /usr/local/bin/mark2
     
 Congratulations! You have now set up mark2. Finally, let's download and install our Minecraft server running [Spigot](http://spigotmc.org/).
 
@@ -299,7 +294,7 @@ You might need to `sudo apt-get install wget`, depending on your Ubuntu image.
 
 For monitoring resource usage, you can run `top`, and for monitoring memory usage, you can run `free -m`.
 
-Update your system using `sudo apt-get update && sudo apt-get dist-upgrade`. Update mark2 using `sudo pip install --upgrade mark2`.
+Update your system using `sudo apt-get update && sudo apt-get dist-upgrade`. Update mark2 using `cd /usr/local/share/mark2 && git pull`.
 
 Have fun!
 
