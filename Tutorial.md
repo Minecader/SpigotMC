@@ -238,6 +238,8 @@ Now, in case you need to restart your VPS, let's set it up so that mark2 starts 
 Add this to the end, obviously customizing your server location and username:
 
     @reboot <username> mark2 start /home/<username>/spigot
+    
+If you wish to use Spigot's builtin `/restart` command, put `mark2 send -n spigot ~restart` in a file named `restart.sh` in your `spigot` folder (change Spigot to whatever name you're using for your server). Then, make it executable by running `chmod +x restart.sh`.
 
 Save the file, and that should be covered. **If you really need to test it**, you can attempt to restart the server:
 
