@@ -231,6 +231,8 @@ Paste this in `nano`, and adjust as necessary:
          
 Save the file, and stop mark2 by running either `mark2 stop` or `~stop` in the console. Start mark2 by running `mark2 start`.
 
+If you wish to use Spigot's builtin `/restart` command, put `mark2 send -n spigot ~restart` in a file named `restart.sh` in your `spigot` folder (change Spigot to whatever name you're using for your server). Then, make it executable by running `chmod +x restart.sh`.
+
 Now, in case you need to restart your VPS, let's set it up so that mark2 starts your server automatically: 
 
     sudo nano /etc/crontab
@@ -239,8 +241,6 @@ Add this to the end, obviously customizing your server location and username:
 
     @reboot <username> mark2 start /home/<username>/spigot
     
-If you wish to use Spigot's builtin `/restart` command, put `mark2 send -n spigot ~restart` in a file named `restart.sh` in your `spigot` folder (change Spigot to whatever name you're using for your server). Then, make it executable by running `chmod +x restart.sh`.
-
 Save the file, and that should be covered. **If you really need to test it**, you can attempt to restart the server:
 
     sudo reboot
