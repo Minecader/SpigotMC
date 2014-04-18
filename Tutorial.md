@@ -5,7 +5,7 @@ Prerequisites
 * patience and a willingness to learn
 * approximately 10 minutes of time
 
-Why Ubuntu LTS?
+Why Ubuntu LTS?~
 --
 
 You can skip this section, but here's some reasoning as for why I chose Ubuntu LTS for this guide:
@@ -223,9 +223,7 @@ Paste this in `nano`, and adjust as necessary:
          # Saves the map every 15 minutes
          */15 *    *    *    *    ~save
          # Restarts Spigot every 24 hours
-         0    12   *    *    *    ~restart
-         # Warns 5 minutes before restart
-         55   11   *    *    *    /say Server restarting in 5 minutes
+         0    12   *    *    *    ~restart 5s
          # Since the logs are already compressed in /logs
          @serverstopped           $rm server.log
          
