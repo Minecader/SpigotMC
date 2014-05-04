@@ -60,7 +60,7 @@ See, that wasn't too difficult. Next, we'll add an administrative user:
     
 For example, `adduser minecraft`. After you've set and verified the password, you don't need to put any more information. Just keep on hitting enter.
 
-Next, we'll be adding the new user to the administrative users list:
+Next, we'll be adding the new user to the administrative users list:p
 
     usermod -a -G sudo <user name here>
 
@@ -164,7 +164,7 @@ Paste this into `nano`:
     java.cli.X.ms=1024M
     java.cli.X.mx=1024M
     # Use whatever mark2 saved the JAR as here
-    mark2.jar-path=spigot-1.5.2-R0.2-SNAPSHOT.jar
+    mark2.jar-path=spigot*.jar
     # Saving notifications aren't really useful
     plugin.save.warn-message=
     plugin.save.message=
