@@ -151,9 +151,9 @@ Wait a few seconds, and the Spigot JAR should be downloaded.
 
 Now, let's set up a blank mark2 configuration, so we can start the server:
 
-    sudo mark2 config
+    sudo touch /etc/mark2/mark2.properties
     
-Save the file without making any changes, as it's easier to use our own `mark2.properties` instead of trawling thru the config.
+It's easier to use our own `mark2.properties` instead of trawling thru the config.
 
 We need to tell mark2 what to do, so:
 
