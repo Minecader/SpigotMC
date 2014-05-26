@@ -1,11 +1,11 @@
 Prerequisites
 --
 
-* a `vswap` OpenVZ VPS or a KVM/Xen/VMware VPS with Ubuntu Server 12.04 LTS installed (architecture doesn't matter), or a dedicated server
+* a `vswap` OpenVZ VPS or a KVM/Xen/VMware VPS with Ubuntu Server 14.04 LTS installed (architecture doesn't matter), or a dedicated server
 * patience and a willingness to learn
 * approximately 10 minutes of time
 
-Why Ubuntu LTS?~
+Why Ubuntu LTS?
 --
 
 You can skip this section, but here's some reasoning as for why I chose Ubuntu LTS for this guide:
