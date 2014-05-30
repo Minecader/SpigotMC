@@ -117,9 +117,13 @@ We are done with the dependencies. Now, it's time to:
 * Clone the mark2 repository
 * Link mark2 to an executable so you can easily run it
 
+**NOTE: A RECENT MARK2 COMMIT BROKE SOMETHING SERIOUS, THIS WILL RESET IT TO THE LAST KNOWN STABLE VERSION**
+
 This is pretty straightforward, and don't worry if you don't understand the commands:
 
     sudo git clone git://github.com/mcdevs/mark2.git /usr/local/share/mark2
+    cd /usr/local/share/mark2
+    git reset --hard d22b5d3520038f3dbfaac5640bfbf34a7d3acb10
     sudo ln -s /usr/local/share/mark2/mark2 /usr/local/bin/mark2
     
 Congratulations! You have now set up mark2. Finally, let's download and install our Minecraft server running [Spigot](http://spigotmc.org/).
