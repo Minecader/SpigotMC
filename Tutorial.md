@@ -155,6 +155,7 @@ Wait a few seconds, and the Spigot JAR should be downloaded.
 
 Now, let's set up a blank mark2 configuration, so we can start the server:
 
+    sudo mkdir /etc/mark2
     sudo touch /etc/mark2/mark2.properties
     
 It's easier to use our own `mark2.properties` instead of trawling thru the config.
@@ -248,7 +249,7 @@ Save the file, and that should be covered. **If you really need to test it**, yo
     sudo reboot
 
 This covers the general server setup using mark2. Sit back, relax, eat a sandwich, and play some Minecraft.
-
+to
 Graphical access
 --
 
