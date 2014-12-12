@@ -25,7 +25,7 @@ Accessing your server
 
 Your host should have provided details for accessing your server via SSH.
 
-* On Windows, you can use the free [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) SSH client to access your server.
+* On Windows, you can use the free [Putty](http://www.chiark.greenend.org.ukm/~sgtatham/putty/download.html) SSH client to access your server.
 * On a Unix-based OS (e.g. Mac OS X), you can use the SSH client in the terminal as such:
   `ssh <server address> -l <username, should be root for clean setups> -p <port>`
 
@@ -105,7 +105,7 @@ For future reference, `~` is your home directory (a.k.a. folder).
 Setting up mark2
 --
 
-[mark2](http://github.com/mcdevs/mark2/) is a *server wrapper* with advanced monitoring, scripting, and multiuser capabilities that's point-and-click through the SSH session, and is easy to install on Ubuntu. Let's get started.
+[mark2](http://github.com/gsand/mark2/) is a *server wrapper* with advanced monitoring, scripting, and multiuser capabilities that's point-and-click through the SSH session, and is easy to install on Ubuntu. Let's get started.
 
 First of all, we need to install some dependencies:
 
@@ -117,13 +117,10 @@ We are done with the dependencies. Now, it's time to:
 * Clone the mark2 repository
 * Link mark2 to an executable so you can easily run it
 
-**NOTE: A RECENT MARK2 COMMIT BROKE SOMETHING SERIOUS, THIS WILL RESET IT TO THE LAST KNOWN STABLE VERSION**
-
 This is pretty straightforward, and don't worry if you don't understand the commands:
 
-    sudo git clone git://github.com/mcdevs/mark2.git /usr/local/share/mark2
+    sudo git clone git://github.com/gsand/mark2.git /usr/local/share/mark2
     cd /usr/local/share/mark2
-    sudo git reset --hard d22b5d3520038f3dbfaac5640bfbf34a7d3acb10
     sudo ln -s /usr/local/share/mark2/mark2 /usr/local/bin/mark2
     
 Congratulations! You have now set up mark2. Finally, let's download and install our Minecraft server running [Spigot](http://spigotmc.org/).
@@ -147,11 +144,7 @@ Next, let's get back to your home directory, and make a folder called `spigot`:
     mkdir spigot
     cd spigot
 
-Now, let's get the latest Spigot JAR, using `wget`:
-
-    wget http://ci.md-5.net/job/spigot/lastSuccessfulBuild/artifact/Spigot-Server/target/spigot.jar
-    
-Wait a few seconds, and the Spigot JAR should be downloaded.
+Upload your `spigot-xxx-SNAPSHOT.jar` to this directory using your favorite SFTP/SCP client, or run the latest BuildTools on the server.
 
 Now, let's set up a blank mark2 configuration, so we can start the server:
 
