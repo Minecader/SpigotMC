@@ -251,7 +251,7 @@ Save the file, and that should be covered. **If you really need to test it**, yo
     sudo reboot
 
 This covers the general server setup using mark2. Sit back, relax, eat a sandwich, and play some Minecraft.
-to
+
 Graphical access
 --
 
@@ -266,7 +266,7 @@ MySQL Server
 
 Some plugins, such as Logblock, require an SQL server. Setting up a server that can be accessed only locally is as easy as:
 
-    sudo apt-get install mysql-server
+    sudo apt-get install mariadb-server
     
 Input your preferred SQL password (preferably different from your server password), and we can create a database.
 
