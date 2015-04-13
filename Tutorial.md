@@ -189,10 +189,6 @@ Accessing your Minecraft console
 
 To access your Minecraft console, run `mark2 attach`. This is the standard mark2 console, and note that you can click on most things, and control the server that way. 
 
-**If you're having "UnicodeEncodeError" after running that, run this, and run `mark2 attach` again:**
-
-    sudo update-locale LANG=en_US.UTF-8 LC_MESSAGES=en_US.UTF-8
-
 Let's run some sample commands:
 
     version
@@ -239,7 +235,7 @@ If you wish to use Spigot's builtin `/restart` command, put
     #!/bin/sh
     mark2 send -n ${PWD##*/} ~restart
 
-in a file named `start.sh` in your `spigot` folder (change Spigot to whatever name you're using for your server). Then, make it executable by running `chmod +x start.sh`.
+in a file named `start.sh` in your `spigot` folder. Then, make it executable by running `chmod +x start.sh`.
 
 Now, in case you need to restart your VPS, let's set it up so that mark2 starts your server automatically: 
 
