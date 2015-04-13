@@ -60,7 +60,7 @@ See, that wasn't too difficult. Next, we'll add an administrative user:
     
 For example, `adduser minecraft`. After you've set and verified the password, you don't need to put any more information. Just keep on hitting enter.
 
-Next, we'll be adding the new user to the administrative users list:p
+Next, we'll be adding the new user to the administrative users list:
 
     usermod -a -G sudo <user name here>
 
@@ -144,7 +144,16 @@ Next, let's get back to your home directory, and make a folder called `spigot`:
     mkdir spigot
     cd spigot
 
-Upload your `spigot-xxx-SNAPSHOT.jar` to this directory using your favorite SFTP/SCP client, or run the latest BuildTools on the server.
+Upload your `spigot-xxx-SNAPSHOT.jar` to this directory using your favorite SFTP/SCP client, or run the latest BuildTools on the server:
+
+    mkdir buildtools; cd buildtools
+    wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+    java -jar BuildTools.jar
+
+Wait for that process to complete, and spigot.jar should be in the `buildtools` folder. Copy it to the `spigot` folder:
+
+    cd ..
+    cp buildtools/spigot.jar spigot/
 
 Now, let's set up a blank mark2 configuration, so we can start the server:
 
