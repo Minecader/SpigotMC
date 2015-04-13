@@ -93,7 +93,7 @@ Find the line that says "PermitRootLogin", and change that to `no`. Save the fil
 
     sudo service ssh restart
 
-More security-conscious admins may point out that the SSH port has remained the same, and that I should have introduced private key authentication, but those are outside the scope of the tutorial, and should not be necessary.
+More security-conscious admins may point out that I should have introduced private key authentication, but those are outside the scope of the tutorial, and should not be necessary.
 
 Now, in case you don't like the spammy Ubuntu message of the day when you log in, you can do:
 
@@ -128,11 +128,11 @@ Congratulations! You have now set up mark2. Finally, let's download and install 
 Setting up Spigot
 --
 
-Obviously, we need to install Java first (we'll be installing Oracle Java 7):
+Obviously, we need to install Java first (we'll be installing Oracle Java 8):
 
     sudo add-apt-repository ppa:webupd8team/java
     sudo apt-get update
-    sudo apt-get install oracle-java7-installer oracle-java7-set-default
+    sudo apt-get install oracle-java8-installer oracle-java8-set-default
     
 If you like your freedoms, or the Oracle installer isn't working for some reason, do:
 
