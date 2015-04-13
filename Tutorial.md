@@ -93,7 +93,7 @@ Find the line that says "PermitRootLogin", and change that to `no`. Save the fil
 
     sudo service ssh restart
 
-You should preferably set up public key authentication for proper security, which is outside the scope of this tutorial. See [this guide](http://lowendbox.com/blog/securing-your-server-ssh-and-sudo) for more information on adding public keys.
+You should preferably set up public key authentication for proper security, which is outside the scope of this tutorial. See [this guide](https://www.digitalocean.com/community/tutorials/how-to-create-ssh-keys-with-putty-to-connect-to-a-vps) for more information on creating and using public keys.
 
 Now, in case you don't like the spammy Ubuntu message of the day when you log in, you can do:
 
