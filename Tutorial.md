@@ -234,7 +234,12 @@ Paste this in `nano`, and adjust as necessary:
          
 Save the file, and stop mark2 by running either `mark2 stop` or `~stop` in the console. Start mark2 by running `mark2 start`.
 
-If you wish to use Spigot's builtin `/restart` command, put `mark2 send -n spigot ~restart` in a file named `restart.sh` in your `spigot` folder (change Spigot to whatever name you're using for your server). Then, make it executable by running `chmod +x restart.sh`.
+If you wish to use Spigot's builtin `/restart` command, put
+
+    #!/bin/sh
+    mark2 send -n ${PWD##*/} ~restart
+
+in a file named `start.sh` in your `spigot` folder (change Spigot to whatever name you're using for your server). Then, make it executable by running `chmod +x start.sh`.
 
 Now, in case you need to restart your VPS, let's set it up so that mark2 starts your server automatically: 
 
@@ -286,8 +291,6 @@ Please use Google for guides.
 
 Tips and tricks
 --
-
-If you're using a Spigot derivative, set `restart-on-crash` to `false` in `bukkit.yml`. **This conflicts with mark2's crash detection**, and doesn't detect possible connection failures, it only checks for server hangs. If your server is **crashing due to a PermGen related issue**, add `java.cli.XX.PermSize=128M` to your `mark2.properties`.
 
 If you're migrating a server, and you can't connect after the migration, check that `server-ip` in `server.properties` is either blank or the IP you want it to bind to, and check your Votifier settings (this can cause connection failures).
 
