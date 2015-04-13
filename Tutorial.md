@@ -231,8 +231,6 @@ Paste this in `nano`, and adjust as necessary:
          */15 *    *    *    *    ~save
          # Restarts Spigot every 24 hours
          0    12   *    *    *    ~restart 5s
-         # Since the logs are already compressed in /logs
-         @serverstopped           $rm server.log
          
 Save the file, and stop mark2 by running either `mark2 stop` or `~stop` in the console. Start mark2 by running `mark2 start`.
 
