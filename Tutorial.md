@@ -144,7 +144,7 @@ Next, let's get back to your home directory, and make a folder called `spigot`:
     mkdir spigot
     cd spigot
 
-Upload your `spigot-xxx-SNAPSHOT.jar` to this directory using your favorite SFTP/SCP client, or run the latest BuildTools on the server:
+Upload your `spigot-xxx-SNAPSHOT.jar` to this directory using your favorite SFTP/SCP client, or run the latest BuildTools on the server (only if your server had more than 1.5GB or so of RAM, otherwise [run it locally](http://www.spigotmc.org/wiki/buildtools/) and upload the JAR, or wget from a precompiled source (be careful)):
 
     mkdir buildtools; cd buildtools
     wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
