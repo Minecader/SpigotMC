@@ -153,7 +153,7 @@ Upload your `spigot-xxx-SNAPSHOT.jar` to this directory using your favorite SFTP
 Wait for that process to complete, and spigot.jar should be in the `buildtools` folder. Copy it to the `spigot` folder:
 
     cd ..
-    cp buildtools/spigot.jar spigot/
+    cp buildtools/spigot*.jar spigot/
 
 Now, let's set up a blank mark2 configuration, so we can start the server:
 
